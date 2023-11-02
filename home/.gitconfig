@@ -1,1 +1,41 @@
-/Users/kazuki.kubo/dotfiles/.gitconfig
+[user]
+	name = Kazuki Kubo
+	email = kz@assaulter.org
+[core]
+	excludesfile = /Users/kazuki.kubo/.gitignore_global
+	trustctime = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	f = fetch --prune
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+	delete-merged-remote-branches = !git push origin $(git branch -r --merged | grep origin/ | grep -v master | sed s~origin/~:~)
+	co = checkout
+	cob = checkout -b
+	ci = commit --verbose
+	b = branch
+	s = status -s
+	d = diff
+        ds = diff --staged
+	g = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	pl = pull --prune
+	ps = push
+	rb = rebase
+	mg = merge
+	sl = stash list
+        st = fetch origin --prune 'refs/tags/*:refs/tags/*'
+[credential]
+	helper = osxkeychain
+[merge "mergepbx"]
+	name = Xcode project files merger
+	driver = mergepbx %O %A %B
+[merge]
+	tool = vimdiff
+[commit]
+	template = /Users/kazuki.kubo/.stCommitMsg
+[url "git@github.com:"]
+	insteadOf = https://github.com/

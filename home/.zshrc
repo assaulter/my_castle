@@ -122,8 +122,8 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 ### for go lang
-#export GOPATH=$HOME/go1.4
-#export PATH=$PATH:$GOPATH/bin
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH:bin
 
 ### open
 # alias coteditor='open $1 -a "/Applications/CotEditor.app"'

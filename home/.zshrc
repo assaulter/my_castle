@@ -1,9 +1,6 @@
 setopt prompt_subst
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
-export GOPATH=$HOME/Develop/go
-export PATH=$PATH:$GOPATH/bin
-
 function rprompt-git-current-branch {
   local name st color gitdir action
   if [[ "$PWD" =~ '/¥.git(/.*)?$' ]]; then
@@ -122,8 +119,10 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 ### for go lang
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH:bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+# export GOROOT=$(go1.18 env GOROOT)
+# export PATH=$PATH:$GOROOT:bin
 
 ### open
 # alias coteditor='open $1 -a "/Applications/CotEditor.app"'

@@ -94,10 +94,12 @@ alias gcc=llvm-gcc
 
 # zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
+#--- path関係 ---#
 ### add paths
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 
+#--- バージョン管理ツール ---#
 ### rbenv setting
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -105,18 +107,17 @@ eval "$(rbenv init -)"
 ### nodebrewの設定
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-### playのpathの設定
-#export PATH=/usr/local/play:$PATH
+# direnv
+# eval "$(direnv hook zsh)"
 
-### Added by the Heroku Toolbelt
-#export PATH="/usr/local/heroku/bin:$PATH"
+# anyenv
+# eval "$(anyenv init -)"
 
+#--- その他言語 ---#
 ### pythonの設定
 #export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
-
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 ### for go lang
 export GOPATH=$HOME/go
@@ -124,21 +125,11 @@ export PATH=$PATH:$GOPATH/bin
 # export GOROOT=$(go1.18 env GOROOT)
 # export PATH=$PATH:$GOROOT:bin
 
-### open
-# alias coteditor='open $1 -a "/Applications/CotEditor.app"'
-# export PATH="$HOME/.ndenv/bin:$PATH"
-# eval "$(ndenv init -)"
-
-# direnv
-eval "$(direnv hook zsh)"
-
-# anyenv
-eval "$(anyenv init -)"
-
 # flutter
-export PATH="$PATH:/Users/kazuki.kubo/Develop/flutter/bin"
+# export PATH="$PATH:/Users/kazuki.kubo/Develop/flutter/bin"
 
-# direnv
+#--- その他ツール ---#
+# editor
 export EDITOR=vim
 
 # peco
@@ -153,4 +144,9 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
+# homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# java
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+

@@ -2,7 +2,7 @@
 	name = Kazuki Kubo
 	email = kz@assaulter.org
 [core]
-	excludesfile = /Users/kazuki.kubo/.gitignore_global
+	excludesfile = /Users/k-kubo/.gitignore_global
 	trustctime = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

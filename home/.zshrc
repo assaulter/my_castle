@@ -150,3 +150,5 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 # java
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

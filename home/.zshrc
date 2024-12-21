@@ -9,13 +9,6 @@ setopt hist_ignore_dups           # 重複を記録しない
 setopt hist_reduce_blanks         # スペース排除
 setopt share_history              # 履歴ファイルを共有
 setopt EXTENDED_HISTORY           # zshの開始終了を記録
-# history 操作まわり
-autoload history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
-
 #--- alias ---#
 alias beep='echo -e "\a"'
 alias r='rails'
@@ -46,22 +39,21 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # export GOROOT=$(go1.18 env GOROOT)
 # export PATH=$PATH:$GOROOT:bin
+export GOPRIVATE=github.com/asahi-digital
 
 #--- その他ツール ---#
 # editor
 export EDITOR=vim
 
-# peco
-function peco-src () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
-    zle accept-line
+# ghq
+function ghq-fzf() {
+  local src=$(ghq list | fzf --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")
+  if [ -n "$src" ]; then
+    cd "$(ghq root)/$src"
   fi
-  zle clear-screen
 }
-zle -N peco-src
-bindkey '^]' peco-src
+zle -N ghq-fzf
+bindkey '^g' ghq-fzf
 
 # homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"

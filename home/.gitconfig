@@ -2,8 +2,8 @@
 	name = Kazuki Kubo
 	email = kz@assaulter.org
 [core]
-	excludesfile = /Users/k-kubo/.gitignore_global
 	trustctime = false
+	excludesfile = /Users/kazukubo/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -36,7 +36,7 @@
 [merge]
 	tool = vimdiff
 [commit]
-	template = /Users/kazuki.kubo/.stCommitMsg
+
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [filter "lfs"]

@@ -64,8 +64,5 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-# link asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-# direnv
-eval "$(direnv hook zsh)"
+# mise
+eval "$(mise activate zsh)"

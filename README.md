@@ -1,4 +1,5 @@
 ## Update
-> homeshick cd my_castle
-
-> git commit...
+```
+$ homeshick cd my_castle
+$ git commit...
+```

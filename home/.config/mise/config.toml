@@ -1,3 +1,4 @@
 [tools]
 node = "latest"
+"npm:@google/gemini-cli" = "latest"
 ruby = "3.2.2"

@@ -66,3 +66,4 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 # mise
 eval "$(mise activate zsh)"
+export PATH="$HOME/.mint/bin:$PATH"

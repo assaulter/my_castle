@@ -67,3 +67,5 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # mise
 eval "$(mise activate zsh)"
 export PATH="$HOME/.mint/bin:$PATH"
+export JAVA_HOME=/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
+export PATH="$JAVA_HOME/bin:$PATH"

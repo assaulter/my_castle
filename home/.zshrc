@@ -39,7 +39,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # export GOROOT=$(go1.18 env GOROOT)
 # export PATH=$PATH:$GOROOT:bin
-export GOPRIVATE=github.com/asahi-digital
 
 #--- その他ツール ---#
 # editor

@@ -35,7 +35,7 @@ There are no build, test, or lint commands — this is a configuration-only repo
 | `home/.zshrc` | zsh config: keybindings (emacs), aliases, PATH, Go/Java/Volta/mise setup, ghq+fzf repo switcher (`^g`) |
 | `home/.gitconfig` | Git user info, aliases, LFS, mergepbx for Xcode `.pbxproj` merging |
 | `home/.Brewfile` | Homebrew formulae and VS Code extensions to install via `brew bundle` |
-| `home/.config/gh/config.yml` | GitHub CLI settings (ssh protocol, `co` alias for `pr checkout`) |
+| `home/.config/gh/config.yml` | GitHub CLI settings (global: https, per-host: ssh via hosts.yml, `co` alias for `pr checkout`) |
 | `home/.config/mise/config.toml` | Runtime versions: Node.js latest, Ruby 3.2.2, Gemini CLI |
 
 ## Key Conventions

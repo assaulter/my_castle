@@ -14,6 +14,7 @@
 	f = fetch --prune
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 	delete-merged-remote-branches = !git push origin $(git branch -r --merged | grep origin/ | grep -v master | sed s~origin/~:~)
+	update-develop = !git checkout develop && git pull --prune && git delete-merged-branches
 	co = checkout
 	cob = checkout -b
 	ci = commit --verbose

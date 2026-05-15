@@ -27,7 +27,6 @@ alias chrome='open -a Gooogle\ Chrome'
 alias kobito='open -a Kobito'
 alias be='bundle exec'
 alias g='git'
-alias gcc=llvm-gcc
 
 #--- paths ---#
 typeset -U path PATH
@@ -47,8 +46,6 @@ path=(
 ### for go lang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-# export GOROOT=$(go1.18 env GOROOT)
-# export PATH=$PATH:$GOROOT:bin
 
 #--- その他ツール ---#
 # editor

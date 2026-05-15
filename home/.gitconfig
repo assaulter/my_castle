@@ -3,7 +3,7 @@
 	email = kz@assaulter.org
 [core]
 	trustctime = false
-	excludesfile = /Users/kazukikubo/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
